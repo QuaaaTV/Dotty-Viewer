@@ -1,0 +1,54 @@
+name: DOTTY Viewer Windows Build
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dotty-viewer/windows-build
+
+permissions:
+  contents: read
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout DOTTY source
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Rust toolchain
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Cache Rust dependencies
+        uses: Swatinem/rust-cache@v2
+
+      - name: Build viewer
+        shell: pwsh
+        run: cargo build --release -p aurora-viewer
+
+      - name: Stage DOTTY launcher
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force -Path dist | Out-Null
+          Copy-Item target/release/aurora-viewer.exe dist/DottyViewer.exe
+          @'
+          @echo off
+          cd /d "%~dp0"
+          DottyViewer.exe --title "DOTTY VIEWER"
+          '@ | Set-Content -Encoding ASCII dist/Start-DOTTY-Viewer.cmd
+          @'
+          DOTTY VIEWER - Windows build
+          This is a branded launcher around the Aurora Viewer executable.
+          The current build retains Aurora's in-app branding until native branding
+          assets and UI theme integration are completed and tested.
+          '@ | Set-Content -Encoding UTF8 dist/README.txt
+
+      - name: Upload Windows build
+        uses: actions/upload-artifact@v4
+        with:
+          name: DOTTY-Viewer-Windows-x64
+          path: dist/*
+          if-no-files-found: error
+          retention-days: 14
