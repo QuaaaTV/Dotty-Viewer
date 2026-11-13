@@ -40,9 +40,11 @@ jobs:
           '@ | Set-Content -Encoding ASCII dist/Start-DOTTY-Viewer.cmd
           @'
           DOTTY VIEWER - Windows build
-          This is a branded launcher around the Aurora Viewer executable.
-          The current build retains Aurora's in-app branding until native branding
-          assets and UI theme integration are completed and tested.
+          Based on Aurora Viewer (GPL-3.0-or-later).
+          DOTTY branding includes the startup logo, window icon, window title,
+          Windows product metadata, and default black/violet interface theme.
+          This unsigned community build has not yet been validated with a live
+          Second Life login.
           '@ | Set-Content -Encoding UTF8 dist/README.txt
 
       - name: Upload Windows build
