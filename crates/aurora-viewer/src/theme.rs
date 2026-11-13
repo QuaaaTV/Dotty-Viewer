@@ -1,5 +1,5 @@
-//! Customisable egui theme. Defaults follow the Aurora brand palette
-//! (subtle glass, violet/indigo accents on navy). Users can override any color in
+//! Customisable egui theme. DOTTY defaults use a black and violet palette.
+//! Users can override any color in
 //! `theme.json` in the config directory.
 
 use egui::{Color32, CornerRadius, Stroke, Visuals};
@@ -36,30 +36,30 @@ pub struct Theme {
 }
 
 impl Default for Theme {
-    /// Brand colors from `scripts/aurora/brand.psd1`; window surfaces follow
-    /// the shared hierarchy documented in `docs/BRANDING.md`.
+    /// DOTTY black and violet defaults; window surfaces retain the shared
+    /// hierarchy documented in `docs/BRANDING.md`.
     fn default() -> Self {
         Theme {
-            violet: "#8B5CF6".into(),
-            indigo: "#4F46E5".into(),
-            teal: "#5EEAD4".into(),
-            navy: "#070B1F".into(),
-            panel: "#252830".into(),
-            bar: "#1B1E26".into(),
-            field: "#181B23".into(),
-            raised: "#363B47".into(),
-            violet_light: "#A78BFA".into(),
-            violet_pale: "#C4B5FD".into(),
-            ink: "#E8EDFB".into(),
-            muted: "#9AA6C6".into(),
-            muted_dim: "#6F7BA0".into(),
+            violet: "#A855F7".into(),
+            indigo: "#6D28D9".into(),
+            teal: "#C084FC".into(),
+            navy: "#090611".into(),
+            panel: "#17111F".into(),
+            bar: "#100B18".into(),
+            field: "#0D0813".into(),
+            raised: "#2A1C38".into(),
+            violet_light: "#C084FC".into(),
+            violet_pale: "#E9D5FF".into(),
+            ink: "#F3E8FF".into(),
+            muted: "#B6A0C8".into(),
+            muted_dim: "#81698F".into(),
             amber: "#FCD34D".into(),
             rose: "#F472B6".into(),
             danger: "#F87171".into(),
             success: "#4ADE80".into(),
             warn: "#FB923C".into(),
             danger_dim: "#A85252".into(),
-            indigo_light: "#818CF8".into(),
+            indigo_light: "#A855F7".into(),
             on_accent: "#FFFFFF".into(),
             panel_alpha: 230,
             button_radius: 5,

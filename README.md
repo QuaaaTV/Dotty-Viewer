@@ -1,10 +1,10 @@
 <div align="center">
 
-<img src="assets/branding/aurora-logo.svg" alt="Aurora Viewer" width="180">
+<img src="assets/branding/aurora-logo.svg" alt="DOTTY Viewer" width="180">
 
-# Aurora Viewer
+# DOTTY VIEWER
 
-**A modern Second Life viewer, written in Rust.**<br>
+**A black-and-purple Second Life viewer build based on Aurora Viewer, written in Rust.**<br>
 A Vulkan renderer, a clean interface, and the Second Life you already know.
 
 [![Download](docs/readme/button-download.svg)](https://github.com/Aurora-Viewer/Aurora-Viewer/releases/latest)&nbsp;
@@ -19,7 +19,7 @@ A Vulkan renderer, a clean interface, and the Second Life you already know.
 [![Rust](https://img.shields.io/badge/rust-stable-5EEAD4?logo=rust&logoColor=white)](https://www.rust-lang.org)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-070B1F)](#build)
 
-<sub>This software is not provided or supported by Linden Lab, the makers of Second Life.</sub>
+<sub>DOTTY VIEWER is an independent community build based on Aurora Viewer. It is not provided or supported by Linden Lab, the makers of Second Life, and is not an official Aurora Viewer release.</sub>
 
 [Why Aurora](#why-aurora) · [Creator tools](#creator-tools) · [Performance](#performance) · [Features](#what-works-today) · [Roadmap](#roadmap) · [Using Aurora](#using-aurora) · [Build](#build) · [Contributing](#contributing)
 

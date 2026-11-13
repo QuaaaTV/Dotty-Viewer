@@ -237,6 +237,7 @@ pub fn with_desktop_id(attrs: winit::window::WindowAttributes) -> winit::window:
 
 fn title_with(title: Option<&str>, profile_dir: &str, version: &str) -> String {
     let base = match title {
+        Some(t) if t.eq_ignore_ascii_case("DOTTY VIEWER") => format!("DOTTY VIEWER {version}"),
         Some(t) => aurora_i18n::tr!("cli-aurora-viewer-2", version = version.to_string(), t = t.to_string()),
         None => aurora_i18n::tr!("cli-aurora-viewer", version = version.to_string()),
     };
