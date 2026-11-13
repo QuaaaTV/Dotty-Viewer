@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+<defs>
+ <linearGradient id="p" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e4c7ff"/><stop offset=".45" stop-color="#a855f7"/><stop offset="1" stop-color="#54128c"/></linearGradient>
+ <filter id="g"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="600" rx="48" fill="#090611"/>
+<path d="M600 55 780 155 820 330 600 470 380 330 420 155Z" fill="#160d25" stroke="#8b3bd1" stroke-width="8"/>
+<path d="M600 100 735 180 765 310 600 415 435 310 465 180Z" fill="none" stroke="url(#p)" stroke-width="10" filter="url(#g)"/>
+<path d="M510 205h95c85 0 120 45 120 105s-42 105-125 105H510V205Zm65 55v100h29c38 0 57-18 57-50s-19-50-57-50h-29Z" fill="url(#p)"/>
+<text x="600" y="525" text-anchor="middle" font-family="Arial,sans-serif" font-size="82" font-weight="900" letter-spacing="10" fill="#f4eaff">DOTTY</text>
+<text x="600" y="570" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="700" letter-spacing="15" fill="#b879f4">VIEWER</text>
+</svg>
